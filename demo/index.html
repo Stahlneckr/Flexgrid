@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <title>FlexGrid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/demo.css" media="all" rel="stylesheet">
+  </head>
+<body>
+
+  <div class="header">
+    <div class="">
+      <h1>Flexgrid</h1>
+      <p>A Simple SCSS grid based on FlexBox</p>
+
+    </div>
+  </div>
+
+  <div class="container fluid">
+    <h1>Fluid</h1>
+    <p>Set column width or let the grid figure it out<span>@include fg-col($size: .25); or @include fg-col();</span></p>
+    <div class="row row-1">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-2">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+    <div class="row row-3">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+    <div class="row row-4">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+    <div class="row row-5">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+    <div class="row row-6">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+    <div class="row row-7">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+  </div>
+
+  <div class="container responsive">
+    <h1>Responsive</h1>
+    <p>Set different layouts for different screen sizes<span>@include breakpoint(lg) { ... }</span></p>
+    <div class="row row-1">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+      <div class="col col-3"><div class="content"></div></div>
+    </div>
+    <div class="row row-2">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+    <div class="row row-3">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col col-2"><div class="content"></div></div>
+    </div>
+  </div>
+
+  <div class="container offset">
+    <h1>Offsets</h1>
+    <p>Add spacing before your columns<span>@include offset(.25)</span></p>
+    <div class="row row-1">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-2">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-3">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-4">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-5">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-6">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-7">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-8">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-9">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+    <div class="row row-10">
+      <div class="col col-1"><div class="content"></div></div>
+    </div>
+  </div>
+
+  <div class="container auto-width">
+    <h1>Auto Widths</h1>
+    <p>Add any number of columns and they resize themselves</p>
+    <div class="row">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <div class="row">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <div class="row">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+  </div>
+
+  <div class="container nesting">
+    <h1>Nesting</h1>
+    <p>Rows can be nested inside columns</p>
+    <div class="row">
+      <div class="col">
+        <div class="inner-row">
+          <div class="inner-col">
+            <div class="inner-inner-row">
+              <div class="inner-inner-col">
+                <div class="content"></div>
+              </div>
+              <div class="inner-inner-col">
+                <div class="content"></div>
+              </div>
+              <div class="inner-inner-col">
+                <div class="content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="inner-col">
+            <div class="content"></div>
+          </div> -->
+        </div>
+      </div>
+      <div class="col">
+        <div class="inner-row">
+          <div class="inner-col"><div class="content"></div></div>
+          <div class="inner-col"><div class="content"></div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="inner-row">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container spacing">
+    <h1>Horizontal spacing</h1>
+    <p>Start: <span>@include fg-row($horz: start);</span></p>
+    <div class="row row-1">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>End: <span>@include fg-row($horz: end);</span></p>
+    <div class="row row-2">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>Between: <span>@include fg-row($horz: between);</span></p>
+    <div class="row row-3">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>Around: <span>@include fg-row($horz: around);</span></p>
+    <div class="row row-4">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+  </div>
+  <div class="container spacing">
+    <h1>Vertical spacing</h1>
+    <p>Start: <span>@include fg-row($vert: start);</span></p>
+    <div class="row row-5">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>Center: <span>@include fg-row($vert: center);</span></p>
+    <div class="row row-6">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>End: <span>@include fg-row($vert: end);</span></p>
+    <div class="row row-7">
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+  </div>
+
+  <div class="container alignment">
+    <h1>Single column alignment</h1>
+    <p>Start: <span>@include fg-col($align: start);</span></p>
+    <div class="row row-1">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>Center: <span>@include fg-col($align: center);</span></p>
+    <div class="row row-2">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+    <p>End: <span>@include fg-col($align: end);</span></p>
+    <div class="row row-3">
+      <div class="col col-1"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+      <div class="col"><div class="content"></div></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+@import '../../flexgrid';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+$blue: #285C81;
+$accent: #C95D35; // #F37624
+
+$lighter-grey: #F9FAFA;
+$light-grey: #C5C9CC;
+$dark-grey: #393E42;
+
+$fg: (
+  width: 1140px
+);
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: $lighter-grey;
+  font-family: 'Open Sans', sans-serif;
+  color: $dark-grey;
+}
+
+.container {
+  max-width: 1140px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  h2 {
+    text-align: left;
+    margin-left: 10px;
+  }
+  p {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    line-height: 22px;
+  }
+  span {
+    background: $light-grey;
+    padding: 4px;
+    margin-left: 4px;
+    font-size: 12px;
+    vertical-align: text-top;
+    font-family: 'Source Code Pro';
+  }
+}
+
+.header {
+  background: $dark-grey;
+  text-align: center;
+  color: $light-grey;
+  height: 300px;
+  @include fg-row($vert:center, $horz:center);
+  max-width: 100%;
+}
+
+.row {
+  @include fg-row();
+}
+
+.content {
+  height: 25px;
+  border-radius: 4px;
+  width: 100%;
+  background: $accent;
+}
+
+.fluid {
+  .row.row-1 {
+    .col-1 {
+      @include fg-col();
+    }
+  }
+  .row.row-2 {
+    .col-1 {
+      @include fg-col(.0833);
+    }
+    .col-2 {
+      @include fg-col();
+    }
+  }
+  .row.row-3 {
+    .col-1 {
+      @include fg-col(.1666);
+    }
+    .col-2 {
+      @include fg-col();
+    }
+  }
+  .row.row-4 {
+    .col-1 {
+      @include fg-col(.25);
+    }
+    .col-2 {
+      @include fg-col();
+    }
+  }
+  .row.row-5 {
+    .col-1 {
+      @include fg-col(.3333);
+    }
+    .col-2 {
+      @include fg-col();
+    }
+  }
+  .row.row-6 {
+    .col-1 {
+      @include fg-col(.4166);
+    }
+    .col-2 {
+      @include fg-col();
+    }
+  }
+  .row.row-7 {
+    .col-1 {
+      @include fg-col(.50);
+    }
+    .col-2 {
+      @include fg-col();
+    }
+  }
+}
+
+.responsive {
+  .row.row-1 {
+    .col-1 {
+      @include fg-col(.333);
+      @include breakpoint(md) {
+        @include fg-col(.25);
+      }
+      @include breakpoint(lg) {
+        @include fg-col(.125);
+      }
+    }
+    .col-2 {
+      @include fg-col(.333);
+      @include breakpoint(md) {
+        @include fg-col(.50);
+      }
+      @include breakpoint(lg) {
+        @include fg-col(.75);
+      }
+    }
+    .col-3 {
+      @include fg-col(.333);
+      @include breakpoint(md) {
+        @include fg-col(.25);
+      }
+      @include breakpoint(lg) {
+        @include fg-col(.125);
+      }
+    }
+  }
+  .row.row-2 {
+    .col-1 {
+      @include fg-col(.50);
+      @include breakpoint(md) {
+        @include fg-col(.25);
+      }
+      @include breakpoint(lg) {
+        @include fg-col(.125);
+      }
+    }
+    .col-2 {
+      @include fg-col(.50);
+      @include breakpoint(md) {
+        @include fg-col(.75);
+      }
+      @include breakpoint(lg) {
+        @include fg-col(.872);
+      }
+    }
+  }
+  .row.row-3 {
+    .col-1 {
+      @include fg-col(.75);
+    }
+    .col-2 {
+      @include fg-col(.25);
+    }
+  }
+}
+
+.offset {
+  .row.row-1 {
+    .col-1 {
+      @include fg-col($offset: .8333);
+    }
+  }
+  .row.row-2 {
+    .col-1 {
+      @include fg-col($offset: .75);
+    }
+  }
+  .row.row-3 {
+    .col-1 {
+      @include fg-col($offset: .6666);
+    }
+  }
+  .row.row-4 {
+    .col-1 {
+      @include fg-col($offset: .5833);
+    }
+  }
+  .row.row-5 {
+    .col-1 {
+      @include fg-col($offset: .50);
+    }
+  }
+  .row.row-6 {
+    .col-1 {
+      @include fg-col($offset: .4166);
+    }
+  }
+  .row.row-7 {
+    .col-1 {
+      @include fg-col($offset: .3333);
+    }
+  }
+  .row.row-8 {
+    .col-1 {
+      @include fg-col($offset: .25);
+    }
+  }
+  .row.row-9 {
+    .col-1 {
+      @include fg-col($offset: .1666);
+    }
+  }
+  .row.row-10 {
+    .col-1 {
+      @include fg-col($offset: .0833);
+    }
+  }
+}
+
+.auto-width {
+  .row {
+    .col {
+      @include fg-col();
+    }
+  }
+}
+
+.nesting {
+  .col {
+    @include fg-col();
+    .inner-row {
+      @include fg-row($vert: center);
+      height: 60px;
+      border: 3px solid $light-grey;
+      border-radius: 3px;
+      .inner-col {
+        @include fg-col(.5);
+        .inner-inner-row {
+          @include fg-row($vert: center);
+          height: 40px;
+          border: 3px solid $dark-grey;
+          .inner-inner-col {
+            @include fg-col(.3333);
+            .content {
+              height: 20px;
+            }
+          }
+        }
+        .content {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.spacing {
+  .row {
+    border: 3px solid $light-grey;
+    border-radius: 3px;
+
+  }
+  .content {
+    margin: 5px 0;
+  }
+  .col {
+    @include fg-col(.2);
+    flex: initial !important;
+  }
+  .row-1 {
+    @include fg-row($horz:start);
+  }
+  .row-2 {
+    @include fg-row($horz:end);
+  }
+  .row-3 {
+    @include fg-row($horz:between);
+  }
+  .row-4 {
+    @include fg-row($horz:around);
+  }
+  .row-5 {
+    height: 100px;
+    @include fg-row($vert: start);
+  }
+  .row-6 {
+    height: 100px;
+    @include fg-row($vert: center);
+  }
+  .row-7 {
+    height: 100px;
+    @include fg-row($vert: end);
+  }
+}
+
+.alignment {
+  .row {
+    border: 3px solid $light-grey;
+  }
+  .content {
+    margin: 5px 0;
+  }
+  .col {
+    @include fg-col(.3333);
+    flex: initial !important;
+  }
+  .row-1 {
+    height: 100px;
+    @include fg-row();
+    .col-1 {
+      @include fg-col($align: start);
+    }
+  }
+  .row-2 {
+    height: 100px;
+    @include fg-row();
+    .col-1 {
+      @include fg-col($align: center);
+    }
+  }
+  .row-3 {
+    height: 100px;
+    @include fg-row();
+    .col-1 {
+      @include fg-col($align: end);
+    }
+  }
+}

@@ -65,7 +65,7 @@ $fg: (
 ```
 | Option          | Values  | What it does             |
 | ----------------|---------|:------------------------:|
-| $size           | auto (default), 0 -> 1 | Positions the columns horizontal |
+| $size           | auto (default), 0 -> 1 | Set's column size (default sizes automatically) |
 | $align          | start (default, end, center, stretch | Positions this specific column vertically |
 | $offset         | 0 (default) -> 1 | Sets margin offset |
 | $order          | #                | Sets order of this specific column |

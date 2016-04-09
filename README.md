@@ -1,5 +1,5 @@
 # FlexGrid
-### A Simple SCSS grid based on FlexBox
+### A Simple Sass grid based on FlexBox
 ###### In progress
 
 ***
